@@ -1,4 +1,0 @@
-[submodule "module/MaxHelper"]
-	path = module/MaxHelper
-	url = https://github.com/MaxV-Shared/MaxV.Helper.AspNet.git
-	branch = master
