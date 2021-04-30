@@ -7,10 +7,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "App", "App\App.csproj", "{8
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "App.XUnitTest", "App.XUnitTest\App.XUnitTest.csproj", "{2C523794-EC5C-4437-ABC8-7EB43594D9EE}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MaxV.Helper", "..\MaxV.Helper.AspNet\MaxV.Helper\MaxV.Helper.csproj", "{6A8FBFF7-F3F3-45C3-A925-1424EF817EE2}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MaxV.Base", "..\MaxV.Helper.AspNet\MaxV.Base\MaxV.Base.csproj", "{A6E9AF69-2E7A-4680-BE84-8F744E0183A7}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,14 +21,6 @@ Global
 		{2C523794-EC5C-4437-ABC8-7EB43594D9EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2C523794-EC5C-4437-ABC8-7EB43594D9EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2C523794-EC5C-4437-ABC8-7EB43594D9EE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6A8FBFF7-F3F3-45C3-A925-1424EF817EE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6A8FBFF7-F3F3-45C3-A925-1424EF817EE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6A8FBFF7-F3F3-45C3-A925-1424EF817EE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6A8FBFF7-F3F3-45C3-A925-1424EF817EE2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A6E9AF69-2E7A-4680-BE84-8F744E0183A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A6E9AF69-2E7A-4680-BE84-8F744E0183A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A6E9AF69-2E7A-4680-BE84-8F744E0183A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A6E9AF69-2E7A-4680-BE84-8F744E0183A7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
