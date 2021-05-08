@@ -1,6 +1,6 @@
-[submodule "Submodules/MaxV.Helper.AspNet"]
-	path = Submodules/MaxV.Helper.AspNet
+[submodule "Submodules/Sub.MaxV.Helper"]
+	path = Submodules/Sub.MaxV.Helper
 	url = https://github.com/MaxV-Shared/MaxV.Helper.AspNet.git
-[submodule "Submodules/MaxV.Base.AspNet"]
-	path = Submodules/MaxV.Base.AspNet
+[submodule "Submodules/Sub.MaxV.Base"]
+	path = Submodules/Sub.MaxV.Base
 	url = https://github.com/MaxV-Shared/MaxV.Base.AspNet.git
