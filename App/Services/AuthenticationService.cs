@@ -1,6 +1,7 @@
 ﻿using App.Data.Entities;
 using App.DTO;
 using App.Services.Interface;
+using MaxV.Base.DTOs;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Caching.Distributed;
 using Microsoft.Extensions.Configuration;

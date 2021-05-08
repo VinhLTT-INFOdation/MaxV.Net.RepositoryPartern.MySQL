@@ -1,5 +1,4 @@
-﻿using App.Data.Base;
-using App.DTO.Base;
+﻿using MaxV.Base;
 using App.Repositories.BaseRepository;
 using AutoMapper;
 using System;

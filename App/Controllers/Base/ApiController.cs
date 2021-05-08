@@ -13,6 +13,5 @@ namespace App.Controllers.Base
     public class ApiController : ControllerBase
     {
 
-
     }
 }

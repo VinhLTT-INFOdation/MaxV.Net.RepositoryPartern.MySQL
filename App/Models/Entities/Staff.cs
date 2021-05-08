@@ -1,4 +1,4 @@
-﻿using App.Data.Base;
+﻿using MaxV.Base;
 using Microsoft.AspNetCore.Identity;
 using System;
 using System.Collections.Generic;

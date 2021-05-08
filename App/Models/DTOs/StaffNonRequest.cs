@@ -1,4 +1,4 @@
-﻿using App.DTO.Base;
+﻿using MaxV.Base.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;

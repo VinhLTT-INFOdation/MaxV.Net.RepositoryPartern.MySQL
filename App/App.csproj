@@ -40,5 +40,9 @@
     <Folder Include="Contants\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Submodules\MaxV.Base.AspNet\MaxV.Base\MaxV.Base.csproj" />
+  </ItemGroup>
+
 
 </Project>

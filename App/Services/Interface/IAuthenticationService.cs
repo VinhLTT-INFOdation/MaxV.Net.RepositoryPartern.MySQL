@@ -1,4 +1,5 @@
 ﻿using App.DTO;
+using MaxV.Base.DTOs;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;

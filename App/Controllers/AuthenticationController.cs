@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using AutoMapper;
 using App.Controllers.Base;
 using App.Services.Interface;
+using MaxV.Base.DTOs;
 
 namespace App.Controllers
 {

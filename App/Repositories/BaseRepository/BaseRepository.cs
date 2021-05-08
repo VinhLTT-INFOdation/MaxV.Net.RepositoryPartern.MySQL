@@ -1,6 +1,6 @@
 ﻿using App.Data;
-using App.Data.Base;
 using AutoMapper;
+using MaxV.Base;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage;
 using System;
