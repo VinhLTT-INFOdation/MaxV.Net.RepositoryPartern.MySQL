@@ -26,11 +26,7 @@ namespace App.Controllers
         [HttpGet()]
         public ActionResult Get()
         {
-            string basePath = "D:\\JSON";
             var rng = new Random();
-            string a = "";
-
-            _logger.LogInformation(a);
             var result = Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
                 Date = DateTime.Now.AddDays(index),

@@ -11,6 +11,7 @@ using System;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
+using System.Net.Http.Headers;
 using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
@@ -83,11 +84,11 @@ namespace App.Services
         public async Task<bool> Register(RegisterDTO request)
         {
             if (request.Password != request.ConfirmPassword)
-                    return false;
+                return false;
 
-            using (var transaction = new CommittableTransaction(new TransactionOptions { IsolationLevel = IsolationLevel.ReadCommitted }))
+            try
             {
-                try
+                using (var transaction = new CommittableTransaction(new TransactionOptions { IsolationLevel = IsolationLevel.ReadCommitted }))
                 {
                     var userExist = await _userManager.FindByNameAsync(request.UserName);
                     if (userExist != null)
@@ -115,16 +116,38 @@ namespace App.Services
 
                     return true;
                 }
-                catch (Exception ex)
-                {
-                    //transaction.Rollback();
-                    return false;
-                }
+            }
+            catch
+            {
+                return false;
             }
         }
-        public async Task<bool> CheckToken(string token)
+        public async Task<string> CheckToken(string authorization)
         {
-            return await _cache.GetStringAsync($"tokens:{token}:deactivated") == null;
+            if (AuthenticationHeaderValue.TryParse(authorization, out var headerValue))
+            {
+                // we have a valid AuthenticationHeaderValue that has the following details:
+
+                var scheme = headerValue.Scheme;
+                var tokenHeader = headerValue.Parameter;
+
+                var validationParameters = new TokenValidationParameters()
+                {
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(_jwtOptions.Value.Secret)),
+                    ValidateIssuerSigningKey = true, 
+                    ValidateIssuer = false,
+                    ValidateAudience = false, 
+                };
+
+                var tokenHandler = new JwtSecurityTokenHandler();
+                tokenHandler.ValidateToken(tokenHeader, validationParameters, out var securityToken);
+                var jwtSecurityToken = (JwtSecurityToken)securityToken;
+                var userName = jwtSecurityToken.Claims.SingleOrDefault(x => x.Type == ClaimTypes.Name).Value;
+                return userName;
+                // scheme will be "Bearer"
+                // parameter will be the token itself.
+            }
+            return null;
         }
     }
 }

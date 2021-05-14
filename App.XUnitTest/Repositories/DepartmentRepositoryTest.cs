@@ -149,14 +149,14 @@ namespace App.UniTest.Repositories
                 }
             };
 
-            await _repository.CreateAsync(mockList);
+            var departments = await _repository.CreateAsync(mockList);
 
             var newObj = new DepartmentNonRequest()
             {
                 Name = "DepartmentRepository_Put_NotNull_Failed",
-                Uuid = new Guid("00000000-0000-0000-0000-000000000001"),
+                Uuid = departments.FirstOrDefault().Uuid,
             };
-            var result = await _repository.PutAsync(new Guid("00000000-0000-0000-0000-000000000001"), newObj);
+            var result = await _repository.PutAsync(newObj.Uuid, newObj);
             Assert.Equal(1,result);
         }
     }

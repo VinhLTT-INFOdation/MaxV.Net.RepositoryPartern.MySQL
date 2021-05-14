@@ -4,7 +4,6 @@ using App.DTO;
 using App.Infrastructures.Dbcontexts;
 using App.Repositories.BaseRepository;
 using App.Repositories.Interface;
-using App.Services.Interface;
 using AutoMapper;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -18,11 +17,9 @@ namespace App.Repositories.Interface
     public class StaffRepository : BaseRepository<Staff>, IStaffRepository
     {
         private readonly UserManager<User> _userManager;
-        private readonly IDepartmentService _departmentRepository;
-        public StaffRepository(ApplicationDbContext context, IMapper mapper, UserManager<User> userManager, IDepartmentService departmentService) : base(context, mapper)
+        public StaffRepository(ApplicationDbContext context, IMapper mapper, UserManager<User> userManager) : base(context, mapper)
         {
             _userManager = userManager;
-            _departmentRepository = departmentService;
         }
         public async Task<IEnumerable<Staff>> GetStaffsPagingAsync(string filter, int pageIndex, int pageSize)
         {

@@ -8,7 +8,7 @@ using App.Data;
 using App.DTO;
 using Microsoft.EntityFrameworkCore;
 using AutoMapper;
-using Helper;
+using MaxV.Helper;
 using App.Infrastructures.Dbcontexts;
 
 namespace App.Repositories.Interface

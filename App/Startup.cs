@@ -1,32 +1,10 @@
-using App.Mapper;
-using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
-using App.Repositories.BaseRepository;
-using App.Repositories.Interface;
-using App.Data.Entities;
-using App.DTO;
-using Microsoft.OpenApi.Models;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.IdentityModel.Tokens;
-using System.Text;
-using App.Infrastructures.Dbcontexts;
-using App.Services.Interface;
-using App.Services;
 using App.Infrastructures.Startup.ServicesExtensions;
-using S4.Infrastructures.Startup.ServicesExtensions;
+using App.Infrastructures.Startup.ServicesExtensions;
 
 namespace App
 {

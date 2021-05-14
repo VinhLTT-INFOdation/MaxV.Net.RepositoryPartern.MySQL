@@ -13,24 +13,5 @@ namespace App.XUnitTest.Controllers
 {
     public class WeatherForecastControllerTest
     {
-        private readonly WeatherForecastController _controller;
-        HttpClient _client;
-        string baseUrl = "/Api/WeatherForecast";
-        public WeatherForecastControllerTest()
-        {
-            _client = new HttpClient
-            {
-                //BaseAddress = new Uri(baseUrl)
-            };
-            var logger = new Mock<ILogger<WeatherForecastController>>();
-            _controller = new WeatherForecastController(logger.Object);
-        }
-        [Fact]
-
-        public async Task WeatherForecastController_GetDepartmentsPaging_NotNull_FailedAsync()
-        {
-
-            //Assert.IsType<BadRequestResult>();
-        }
     }
 }

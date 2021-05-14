@@ -8,15 +8,12 @@ using AutoMapper;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace S4.Infrastructures.Startup.ServicesExtensions
+namespace App.Infrastructures.Startup.ServicesExtensions
 {
     public static class InjectionServiceExtension
     {
         public static void AddInjectedServices(this IServiceCollection services)
         {
-            //services.AddTransient<IWebhookEventRepository<WebhookEvent>, WebhookEventRepository>();
-            //services.AddTransient<IWebhookEventService, WebhookEventService>();
-
             var mapperConfig = new MapperConfiguration(mc =>
             {
                 mc.AddProfile(new AutoMapperProfile());
@@ -28,8 +25,6 @@ namespace S4.Infrastructures.Startup.ServicesExtensions
             services.AddSingleton(mapper);
             services.AddTransient<IAuthenticationService, AuthenticationService>();
             services.AddTransient<UserManager<User>, UserManager<User>>();
-            //services.AddTransient<IBaseRepository<Department>, BaseRepository<Department>>();
-            //services.AddTransient<IBaseRepository<Staff>, BaseRepository<Staff>>();
             services.AddTransient<IDepartmentRepository, DepartmentRepository>();
             services.AddTransient<IStaffRepository, StaffRepository>();
             services.AddTransient<IDepartmentService, DepartmentService>();

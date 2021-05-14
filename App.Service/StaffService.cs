@@ -4,7 +4,6 @@ using App.Repositories.Interface;
 using App.Services.Base;
 using App.Services.Interface;
 using AutoMapper;
-using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;

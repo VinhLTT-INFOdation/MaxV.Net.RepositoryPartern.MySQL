@@ -54,7 +54,7 @@ namespace App.Services
             return result;
         }
 
-        public async Task<IEnumerable<DepartmentNonRequest>> GetAllAsync(string filter)
+        public async Task<IEnumerable<DepartmentNonRequest>> GetAllAsync(string filter = "")
         {
             var entities = await _departmentRepository.GetAllAsync(filter);
             var result = _mapper.Map<IEnumerable<DepartmentNonRequest>>(entities);
